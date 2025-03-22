@@ -9,7 +9,7 @@ export const editComment = async (req, res) => {
     const { token, email, postID, userID, commentID, updatedComment } = req.body
 
     try {
-        const response = await axios.get("http://localhost:8081/gateway/check-token-validity", {
+        const response = await axios.get(process.env.TOKEN_VALIDITY_URL, {
             headers: { Authorization: `Bearer ${token}` },
             params: { email: email }
         })

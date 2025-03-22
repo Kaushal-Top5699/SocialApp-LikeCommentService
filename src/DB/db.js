@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const uri = "mongodb+srv://kaushaltopusa:**********@cluster101.bm6x1.mongodb.net/SocialAppLikeComment?retryWrites=true&w=majority&appName=Cluster101"
+dotenv.config();
+
+const uri = `mongodb+srv://kaushaltopusa:${process.env.PASSWORD}@cluster101.bm6x1.mongodb.net/SocialAppLikeComment?retryWrites=true&w=majority&appName=Cluster101`
 
 export const connectDB = async () => {
     try {
