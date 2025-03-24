@@ -38,7 +38,7 @@ export const postComment = async (req, res) => {
                 comment: newComment.comment
             })
         }
-        return res.status(400).json({ ERROR: `Unauthroized access denied! Invalid token.` })
+        return res.status(400).json({ ERROR: `Unauthroized access denied! Token is invalid.` })
     } catch (error) {
         console.error(`Error occured while posting a comment. ERROR: ${error}`)
         return res.status(500).json({ ERROR: `Error occured while posting a comment. ERROR: ${error}` })
