@@ -23,13 +23,14 @@ connectDB()
 app.post("/post-like", postLike)
 app.post("/delete-like", deleteLike)
 app.get("/likes-count", likesCount)
-/* LIKE ROUTES START */
+/* LIKE ROUTES END */
 
 /* COMMENT ROUTES START */
 app.post("/post-comment", postComment)
 app.post("/edit-comment", editComment)
 app.get("/count-comments", countComments)
 app.post("/delete-comment", deleteComment)
+/* COMMENT ROUTES END */
 
 app.listen(PORT, () => {
     console.log("--------------------------------------------")
